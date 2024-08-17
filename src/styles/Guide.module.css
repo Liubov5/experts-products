@@ -1,0 +1,28 @@
+.guides{
+    display: flex;
+    flex-wrap: nowrap;
+    gap:20px;
+    padding: 20px;
+    position: relative;
+}
+.guide {
+    width: 300px;
+    border:1px solid black;
+    position: relative;
+    height: 300px;
+}
+.details{
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+.info{
+    padding-bottom: 20px;
+    padding-inline: 10px;
+}
+.description{
+    -webkit-line-clamp: 3; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+}
