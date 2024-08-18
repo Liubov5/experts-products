@@ -15,7 +15,8 @@ export const productsSlice = createSlice({
                 price:0,
                 rate:0,
                 reviews:[],
-                type:"guides"
+                type:"guides",
+                tags:[]
             },
             {
                 id:nanoid(),
@@ -27,7 +28,8 @@ export const productsSlice = createSlice({
                 price:0,
                 rate:0,
                 reviews:[],
-                type:"guides"
+                type:"guides",
+                tags:[]
             },
             {
                 id:nanoid(),
@@ -39,7 +41,8 @@ export const productsSlice = createSlice({
                 price:0,
                 rate:0,
                 reviews:[],
-                type:"webinars"
+                type:"webinars",
+                tags:[]
             }
         ],
     },
