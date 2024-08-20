@@ -4,7 +4,10 @@ import logo from "../../images/logo.jpg"
 import avatar from "../../images/avatar.png"
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../utils/routes';
+import { useSelector } from 'react-redux';
+
 const Header = () => {
+  const { user: currentUser } = useSelector((state) => state.auth);
   return (
     <section className={styles.header}>
         <div className={styles.logo}>
@@ -14,9 +17,8 @@ const Header = () => {
             <input type="search" name="search" placeholder='search ...' autoComplete='off'/>
         </div>
         <div className={styles.info}></div>
-        <div className={styles.profile}>
-            <img src={avatar}/>
-            
+        <div className={styles.profile}>  
+            {currentUser ? <Link to={ROUTES.PROFILE}> <img src={avatar}/></Link> : <> <Link to={ROUTES.LOGIN}>Sign In</Link> <Link to={ROUTES.REGISTER}>Sign Up</Link> </>}
         </div>
     </section>
   )

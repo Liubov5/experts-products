@@ -35,7 +35,7 @@ const Login = () => {
     setLoading(true);
 
     dispatch(login({username, password})).unwrap().then(()=>{
-      navigate*"/profile";
+      navigate("/profile");
       window.location.reload();
     }).catch(()=>{
       setLoading(false)
@@ -48,9 +48,9 @@ const Login = () => {
 
   return (
     <div className='col-md-12 login-form'>
+      <h2>Login</h2>
       <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleLogin}>
-        { 
-          ({errors, touched})=>{
+        {({errors, touched})=>(
             <Form>
               <div className='form-group'>
                 <label htmlFor='username'>Username</label>
@@ -71,7 +71,7 @@ const Login = () => {
                 </button>
               </div>
             </Form>
-          } 
+        ) 
         }
       </Formik>
 

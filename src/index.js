@@ -9,6 +9,10 @@ import { store } from './features/store';
 import Products from './components/products/Products';
 import ProductPage from './components/products/ProductPage';
 import { ROUTES } from './utils/routes';
+import Profile from './components/auth/Profile';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
+
 
 const router = createHashRouter([
   {
@@ -27,6 +31,18 @@ const router = createHashRouter([
       {
         path:ROUTES.PRODUCT,
         element:<ProductPage />
+      },
+      {
+        path:ROUTES.PROFILE,
+        element:<Profile />
+      },
+      {
+        path:ROUTES.LOGIN,
+        element:<Login />
+      },
+      {
+        path:ROUTES.REGISTER,
+        element:<Register />
       },
     ]
   },

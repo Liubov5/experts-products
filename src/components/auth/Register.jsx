@@ -35,6 +35,7 @@ const Register = () => {
   }
   return (
     <div className='col-md-12 signup-form'>
+      <h2>Register</h2>
        <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
