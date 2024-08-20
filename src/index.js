@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider, HashRouter } from 'react-router-dom';
+import { createHashRouter, RouterProvider, HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './features/store';
 import Products from './components/products/Products';
 import ProductPage from './components/products/ProductPage';
 import { ROUTES } from './utils/routes';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path:"/",
     element:<App />,
